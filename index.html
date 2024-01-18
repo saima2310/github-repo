@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mb-4">GitHub Repositories</h1>
+
+      <div class="form-group row">
+        <label for="username" class="col-sm-2 col-form-label"
+          >GitHub Username:</label
+        >
+        <div class="col-sm-6">
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            placeholder="Enter GitHub Username"
+          />
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-primary" onclick="fetchRepositories()">
+            Fetch Repositories
+          </button>
+        </div>
+      </div>
+
+      <div class="loader" id="loader"></div>
+
+      <div id="userDetails" class="mb-4">
+        <!-- User details will be appended here -->
+      </div>
+
+      <div id="repositories">
+        <!-- Repository cards will be appended here -->
+      </div>
+
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center mt-4" id="pagination"></ul>
+      </nav>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
